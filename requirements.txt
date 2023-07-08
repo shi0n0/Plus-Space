@@ -1,3 +1,4 @@
 Django==4.1.2
 django_environ==0.9.0
 djangorestframework
+django-webpack-loader
