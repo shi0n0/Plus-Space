@@ -3,9 +3,9 @@ from rest_framework import generics
 from app.models import UserProfile
 from app.api.serializer import UserProfileSerializer
 
-class listView(generics.ListCreateAPIView):
+class ListView(generics.ListCreateAPIView):
     queryset = UserProfile.objects.all().order_by('-id')
 
 class DetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = UserProfile.objects.all()
-    serializer_class = UserProfileSerializer 
+    serializer_class = UserProfileSerializer
