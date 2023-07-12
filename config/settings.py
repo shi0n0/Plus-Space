@@ -33,8 +33,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'app'
-    'webpack_loader'
+    'app',
+    'webpack_loader',
 ]
 
 MIDDLEWARE = [
@@ -135,7 +135,7 @@ REST_FRAMEWORK = {
 WEBPACK_LOADER = {
     'DEFAULT' : {
         'BUNDLE_DIR_NAME': 'dist/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'webpack-stats.json')
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'dist', 'webpack-stats.json')
     }
 }
 
