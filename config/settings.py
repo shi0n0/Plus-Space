@@ -132,14 +132,25 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination'
 }
 
-WEBPACK_LOADER = {
-    'DEFAULT' : {
-        'BUNDLE_DIR_NAME': 'dist/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'dist', 'webpack-stats.json')
-    }
-}
+# WEBPACK_LOADER = {
+#     'DEFAULT' : {
+#         'BUNDLE_DIR_NAME': 'dist/',
+#         'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'dist', 'webpack-stats.json')
+#     }
+# }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+WEBPACK_LOADER = {
+  'DEFAULT': {
+    'CACHE': not DEBUG,
+    'BUNDLE_DIR_NAME': 'webpack_bundles/',
+    'STATS_FILE': str(BASE_DIR.joinpath('frontend' 'webpack-stats.json')),
+    'POLL_INTERVAL': 0.1,
+    'TIME_OUT':None,
+    'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],
+  }
+}
