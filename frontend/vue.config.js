@@ -9,18 +9,16 @@ module.exports = {
 
         config.plugin('BundleTracker').use(BundleTracker, [
             {
-                filename: './webpack-stats.json'
+                filename: 'webpack-stats.json'
             }
         ])
-
+        
         config.resolve.alias.set('__STATIC__', 'static')
 
         config.devServer
-            .public('http://0.0.0.0:8080')
             .host('0.0.0.0')
             .port(8080)
-            .hotOnly(true)
-            .watchOptions({poll: 1000})
+            .hot(true)
             .https(false)
             .headers({'Access-Control-Allow-Origin': ['\*']})
     }
