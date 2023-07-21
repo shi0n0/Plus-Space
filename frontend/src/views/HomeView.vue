@@ -1,24 +1,22 @@
 <template>
-    <div>
-        <v-container>
-            <div v-for="">
-                <p>
-            <div>
-        </v-container>
-    </div>
+  <div>
+    <v-container>
+      <UserProfile />
+    </v-container>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
 // Components
-import HelloWorld from "../components/HelloWorld.vue";
+import UserProfile from "../components/UserProfile.vue";
 
 export default defineComponent({
   name: "HomeView",
 
   components: {
-    HelloWorld,
+    UserProfile,
   },
 });
 </script>
