@@ -154,3 +154,7 @@ WEBPACK_LOADER = {
     'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],
   }
 }
+
+# settings.py
+
+AUTH_USER_MODEL = 'app.CustomUser'
