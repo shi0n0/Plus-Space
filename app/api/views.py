@@ -1,10 +1,10 @@
 from rest_framework import generics
-from app.models import User
-from app.api.serializer import UserSerializer
+from app.models import CustomUser
+from app.api.serializer import CustomUserSerializer
 
 class ListView(generics.ListCreateAPIView):
-    queryset = User.objects.all().order_by('-id')
+    queryset = CustomUser.objects.all().order_by('-id')
 
 class DetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
