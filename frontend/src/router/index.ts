@@ -1,17 +1,17 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/register',
-    component: () => import('@/views/Register.vue'),
+    path: "/register",
+    component: () => import("@/views/Register.vue"),
   },
   {
-    path: '/login',
-    component: () => import('@/views/Login.vue'),
+    path: "/login",
+    component: () => import("@/views/Login.vue"),
   },
   {
-    path: '/logout',
-    component: () => import('@/views/Logout.vue'),
+    path: "/logout",
+    component: () => import("@/views/Logout.vue"),
   },
   // その他のルートを追加する場合はここに記述
 ];
