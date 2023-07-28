@@ -21,7 +21,7 @@ export default defineComponent({
       password: "",
     };
   },
-  
+
   methods: {
     async registerUser() {
       try {
