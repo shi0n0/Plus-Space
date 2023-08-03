@@ -1,6 +1,9 @@
-from django.urls import re_path
-from . import views
+from django.urls import path
+from .views import SampleAPIView, register_user, login_user, logout_user
 
 urlpatterns = [
-    re_path('', views.IndexView.as_view(), name="index"),
+    path('register/', register_user, name='register'),
+    path('login/', login_user, name='login'),
+    path('logout/', logout_user, name='logout'),
+
 ]
