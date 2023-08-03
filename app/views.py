@@ -8,6 +8,10 @@ from .serializer import CustomUserSerializer
 from django.contrib.auth.decorators import login_required
 
 
+class SampleAPIView(APIView):
+    def get(self, request):
+        return Response("OK", status=status.HTTP_200_OK)
+
 
 # ユーザー登録APIビュー
 @api_view(['POST'])
